@@ -10,6 +10,7 @@ console.log(myFriends.length); // মোট কয়টি উপাদান আ�
 
 
 
+
 var bestFriend = myFriends[0]; // get element value by index
 myFriends[2] = 'Masud'; // set element value by index 
 myFriends.push('Kolija'); // add last element
@@ -22,3 +23,9 @@ console.log(friendsAge.indexOf(26)); // কোনো একটি উপাদ�
 console.log(friendsAge[2]); // যেহেতু 0 থেকে index গণনা শুরু হয়। 
 console.log(friendsAge.indexOf(89)); 
 console.log(myFriends); 
+
+console.log(myFriends.includes('Shahin')); // includes দ্বারা জানা যায় যে ঐ ভ্যালু টা ওখানে আছে কিনা। 
+var newArray = myFriends.concat(myFriends); // দুইটা এড়ে কে একসাথে যোগ করে একটা এড়ে তে রুপান্তর করবে। 
+console.log(newArray); 
+newArray.splice(5, 4); // 5 নাম্বার index থেকে 4 টি ভ্যালুকে ডিলিট করে দিছে। 
+console.log(newArray); 
