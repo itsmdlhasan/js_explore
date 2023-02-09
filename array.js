@@ -10,7 +10,7 @@ console.log(myFriends.length); // মোট কয়টি উপাদান আ�
 
 
 
-
+console.log(Array.isArray(myFriends)); // array কে typeof দিয়ে detect করা যায়না বলে এভাবে জানতে হয়। 
 var bestFriend = myFriends[0]; // get element value by index
 myFriends[2] = 'Masud'; // set element value by index 
 myFriends.push('Kolija'); // add last element
@@ -27,5 +27,17 @@ console.log(myFriends);
 console.log(myFriends.includes('Shahin')); // includes দ্বারা জানা যায় যে ঐ ভ্যালু টা ওখানে আছে কিনা। 
 var newArray = myFriends.concat(myFriends); // দুইটা এড়ে কে একসাথে যোগ করে একটা এড়ে তে রুপান্তর করবে। 
 console.log(newArray); 
-newArray.splice(5, 4); // 5 নাম্বার index থেকে 4 টি ভ্যালুকে ডিলিট করে দিছে। 
-console.log(newArray); 
+
+
+
+const friends = [12, 45, 32, 22, 44, 62, 29, 69, 87];
+console.log(friends);
+const partial = friends.slice(2, 5); // 2 index theke 5 index number er ag porjonto kete notun variable niye newa
+console.log(partial);
+// উল্লেখ্য যে slice দ্বারা এই কেটে নেয়া দ্বারা অরিজিনাল variable নষ্ট হয়না।  
+const memorial = friends.splice(2, 5); // 2 index theke sorbomot 5 ta ke kete niye notun variable banano
+console.log(memorial);
+// উল্লেখ্য যে splice দ্বারা এই কেটে নেয়া দ্বারা অরিজিনাল variable নষ্ট হয়।   
+console.log(friends); 
+const pusher = friends.splice(1, 2, 64); // splice দিয়ে কেটে নেয়া জায়গায় ৬৪ যোগ করা হয়েছে। চাইলে আরো যত ইচ্ছা করা যাবে। 
+console.log(friends);
